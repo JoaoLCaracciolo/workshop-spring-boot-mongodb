@@ -1,6 +1,7 @@
 package com.caracciolo.workshopmongo.domain;
 
 
+import com.caracciolo.workshopmongo.dto.AuthorDTO;
 import com.caracciolo.workshopmongo.dto.CommentDTO;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -34,6 +35,9 @@ public class Post implements Serializable {
         this.title = title;
         this.body = body;
         this.author = author;
+    }
+
+    public Post(String id, Date parse, String bomDia, String body, AuthorDTO authorDTO) {
     }
 
     public String getId() {
